@@ -1,0 +1,27 @@
+.CalGrid{
+    height: 90vh;
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-template-rows: repeat(5, 1fr); */
+    grid-template-columns: repeat(7, 1fr);
+    background: var(--dark1);
+    color: var(--dark-txt);
+}
+.CalItem{
+    border-top: 1px solid black;
+    background-color: #0000;
+    transition: all 0.2s ease-in-out;
+}
+.presentDay{
+    border-top: 5px solid #0078d4;
+    background: #0078d499;
+}
+.pastDay{
+    background: var(--dark1);
+}
+.futureDay{
+    background: var(--dark2);
+}
+.CalItem:hover{
+    background-color: #0003;
+}

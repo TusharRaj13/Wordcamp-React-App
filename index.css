@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.btn {
+  padding: 10px;
+  background-color: #0078d4;
+  transition: all 0.1s ease-in-out;
+  height: 100%;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+.btn:hover{
+  background-color: #3070aa;
+}
+:root{
+  --dark0: #000;
+  --dark1: #212121;
+  --dark2: #333;
+  --dark-txt: #fff;
+  --dark-txt1: #bbb;
+
+  --light0: #fff;
+  --light1: #dedede;
+  --light2: #ccc;
+  --light-txt: #000;
+  --light-txt1: #444;
+}
