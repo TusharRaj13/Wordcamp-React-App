@@ -41,6 +41,9 @@ const CalenderReducer = (state = initial, action) => {
         case 'SELECT_DATE':
             state = {...state, selected_year: action.payload.sy, selected_month: action.payload.sm, selected_date: action.payload.sd };
             return state;
+        case 'RESET_SELECT':
+            state = {...state, selected_year: 0, selected_month: 0, selected_date: 0 };
+            return state;
         default:
             return state;
     }

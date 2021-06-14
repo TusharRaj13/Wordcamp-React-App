@@ -1,0 +1,23 @@
+.calView{
+    display: grid;
+    grid-template-columns: 7.5fr auto;
+    grid-auto-flow: row;
+}
+.daysFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: var(--dark2);
+    color: var(--dark-txt);
+    padding: 4.5px 0;
+}
+.calHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark2);
+    color: var(--dark-txt);
+    height: 6vh;
+    border-bottom: 1px solid var(--dark0);
+}

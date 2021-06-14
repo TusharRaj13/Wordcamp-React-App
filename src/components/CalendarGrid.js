@@ -11,6 +11,7 @@ function CalendarGrid() {
     const startAt = useSelector(state => state.CalendarReducer.start_at);
     const arr = useSelector(state => state.CalendarReducer.days);
     const cal = useSelector(state => state.CalendarReducer);
+    const event_list = useSelector(state => state.CampListReducer);
     const dispatch = useDispatch();
 
     // console.log(startAt, arr);
@@ -21,12 +22,17 @@ function CalendarGrid() {
     return (
         <div className="CalGrid">
            { arr.map((item,index) => {
-               var t = (new Date() - new Date(cal.current_year, cal.current_month-1, item));
+               var dd = new Date(cal.current_year, cal.current_month-1, item);
+               var t = (new Date() - dd);
            return (<div key={index} onClick={() => selectdate(item)} className={`CalItem            
            ${ t>86400000 ? "pastDay" : t<0 ? "futureDay" : ""}
            ${(cal.today_year == cal.current_year && cal.today_month == cal.current_month && cal.today_date == item) ? "presentDay" : ""}`} 
            style={{gridColumnStart:((startAt+index)%7)+1 }}>
                <h1>{item}</h1>
+               {event_list.camp_list.map((itm) => {
+                   console.log((+ itm["Start Date (YYYY-mm-dd)"] - Date.UTC(cal.current_year, cal.current_month-1, item)/1000) === 0, item);
+                   return (+ itm["Start Date (YYYY-mm-dd)"] - Date.UTC(cal.current_year, cal.current_month-1, item)/1000) === 0 ? <p>{itm["title"]["rendered"]}</p> : "";
+               })}
            </div>)})}
         </div>
     )

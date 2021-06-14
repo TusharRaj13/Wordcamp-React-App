@@ -4,3 +4,7 @@ body{
     /* background-color: greenyellow; */
     font-family: monospace;
 }
+
+.AppContainer{
+    padding: 0 0 0 3rem;
+}

@@ -6,7 +6,6 @@ export const SetStartAt = (i) => {
 }
 
 export const SetDays = (i) => {
-    console.log("DD", i);
     switch(i){
         case 28:
             return { type: 'SET_M28' };
@@ -45,4 +44,8 @@ export const SelectDate = (sy, sm, sd) => {
         "sd": sd
     }
     return { type: 'SELECT_DATE', payload: d};
+}
+
+export const ResetSelection = () => {
+    return { type: 'RESET_SELECT' };
 }

@@ -1,0 +1,13 @@
+.calEventView{
+    background: var(--dark2);
+    color: var(--dark-txt);
+    width: 25vw;
+    height: 100%;
+    border-left: 1px solid var(--dark0);
+}
+.calEventViewHeader{
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    border-bottom: 1px solid var(--dark0);
+}
