@@ -11,3 +11,6 @@
     height: 6vh;
     border-bottom: 1px solid var(--dark0);
 }
+.ico{
+    font-size: 1.5rem;
+}

@@ -29,9 +29,9 @@ function CalendarGrid() {
            ${(cal.today_year == cal.current_year && cal.today_month == cal.current_month && cal.today_date == item) ? "presentDay" : ""}`} 
            style={{gridColumnStart:((startAt+index)%7)+1 }}>
                <h1>{item}</h1>
-               {event_list.camp_list.map((itm) => {
-                   console.log((+ itm["Start Date (YYYY-mm-dd)"] - Date.UTC(cal.current_year, cal.current_month-1, item)/1000) === 0, item);
-                   return (+ itm["Start Date (YYYY-mm-dd)"] - Date.UTC(cal.current_year, cal.current_month-1, item)/1000) === 0 ? <p>{itm["title"]["rendered"]}</p> : "";
+               {event_list.camp_list.map((itm, index) => {
+                   //console.log((+ itm["Start Date (YYYY-mm-dd)"] - Date.UTC(cal.current_year, cal.current_month-1, item)/1000) === 0, item);
+                   return (+ itm["Start Date (YYYY-mm-dd)"] - Date.UTC(cal.current_year, cal.current_month-1, item)/1000) === 0 && <p key={index}>{itm["title"]["rendered"]}</p>;
                })}
            </div>)})}
         </div>
