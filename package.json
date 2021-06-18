@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "React app without create-react-app",
   "main": "index.js",
+  "homepage": "http://TusharRaj13.github.io/Wordcamp-React-App",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve",
-    "build": "webpack ."
+    "build": "webpack .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [
     "webpack-react"
@@ -27,6 +30,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.3.6",
+    "gh-pages": "^3.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
